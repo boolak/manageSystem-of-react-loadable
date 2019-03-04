@@ -1,0 +1,15 @@
+.center-map {
+    position: relative;
+    width: 670px;
+    height: 670px;
+    margin: 0 auto;
+
+    .back-btn {
+        position: absolute;
+        top: 23%;
+        left: 5%;
+        color: #5f93e7;
+        cursor: pointer;
+        z-index: 100;
+    }
+}

@@ -1,0 +1,39 @@
+.guide-menu {
+    position: fixed;
+    width: 280px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #304844;
+    z-index: 1;
+
+    
+    .title {
+        line-height: 60px;
+        font-size: 18px;
+        color: #00C179;
+        text-align: center;
+    }
+    .nav {
+        .ant-menu-submenu-open{
+            .ant-menu-item{
+                background: #3A5B56;
+            }
+            .ant-menu-submenu-title{
+                background: #00C179;
+            }
+        }
+        .ant-menu-item{
+            margin: 0;
+            background: #304844;
+           
+            &.ant-menu-item-selected, &:hover{
+                background: #628477;
+            }
+        }
+        .ant-menu-submenu-title{
+            background: #304844;
+            margin: 0;
+        }
+    }
+}

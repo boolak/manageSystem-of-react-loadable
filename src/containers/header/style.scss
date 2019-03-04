@@ -1,0 +1,16 @@
+header{
+    height: 60px;
+    line-height: 60px;
+    color: #333;
+    width: 100%;
+    text-align: right;
+    position: fixed;
+    top:0;
+    left:0;
+    padding-right: 40px;
+    background: #fff;
+    .icon-exit{
+        margin-left: 20px;
+        cursor: pointer;
+    }
+}

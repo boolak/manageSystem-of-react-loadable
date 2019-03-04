@@ -1,0 +1,81 @@
+.IEE-map {
+    width: 100%;
+    position: relative;
+    padding-left: 152px;
+    padding-right: 120px;
+    padding-bottom: 97px;
+    .map-chart {
+        width: 901px;
+        height: 816px;
+    }
+    .map-title {
+        font-size: 20px;
+        color: #f9f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h3 {
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+            font-weight: bold;
+            color: #f9f9fa;
+        }
+
+        .icon-bg {
+            width: 28px;
+            height: 28px;
+            display: inline-block;
+            background: #0293dc;
+            border-radius: 50%;
+            margin-right: 10px;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        .iconfont {
+            font-weight: normal;
+        }
+
+        .title {
+            position: relative;
+        }
+
+        .title:hover .pop {
+            display: block;
+        }
+
+    }
+    .go-Back {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        font-size: 24px;
+        color: #0293dc;
+        cursor: pointer;
+    }
+    .mapTooltip {
+        line-height: 26px;
+        text-align: left;
+        white-space: normal;
+        max-width: 250px;
+        font-size: 14px;
+
+        .title {
+            text-align: center;
+            color: #333;
+            font-size: 16px;
+        }
+
+        span {
+            padding-left: 10px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .color-yellow {
+            color: #f4c300
+        }
+
+    }
+}

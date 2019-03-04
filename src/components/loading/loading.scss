@@ -1,0 +1,19 @@
+.flex-center-vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    min-height: 190px;
+    
+    >div {
+        flex: 1;
+    }
+}
+
