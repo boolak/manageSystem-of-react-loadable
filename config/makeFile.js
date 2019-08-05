@@ -1,6 +1,6 @@
 const FS = require('fs');
 var readlineSync = require('readline-sync');
-const path = './src/containers/';// 创建组件文件路径，根据实际项目调整
+const PATH = './src/containers/';// 创建组件文件路径，根据实际项目调整
 
 //读取模板文件，替换相应内容，创建新模块文件
 let replaceFile = function(filePath,sourceRegx){
@@ -13,9 +13,9 @@ let replaceFile = function(filePath,sourceRegx){
         let str = data.toString();
         str = str.replace(sourceRegx,arguments[0]);
 
-        FS.mkdir(path + arguments[0],(e)=>{
+        FS.mkdir(PATH + arguments[0],(e)=>{
             if(!e){
-                FS.mkdir(path + arguments[0] + '/children', e=>{
+                FS.mkdir(PATH + arguments[0] + '/children', e=>{
 
                 })
             }else{
@@ -23,10 +23,10 @@ let replaceFile = function(filePath,sourceRegx){
             }
             
         });
-        FS.writeFile(path + arguments[0] + '/'+arguments[0] + '.jsx', str, function (err) {
+        FS.writeFile(PATH + arguments[0] + '/'+arguments[0] + '.jsx', str, function (err) {
             if (err) return err;
         });
-        FS.writeFile(path + arguments[0] + '/'+arguments[0] + '.scss', '.' + arguments[0] + '{}', (err)=>{
+        FS.writeFile(PATH + arguments[0] + '/'+arguments[0] + '.scss', '.' + arguments[0] + '{}', (err)=>{
             if (err) return err;
         })
         console.log('Component of '+ arguments[0] +' has completed!\n');
