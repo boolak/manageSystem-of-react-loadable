@@ -47,6 +47,7 @@ README.md                             // 项目说明文档
 ### 环境配置
 1. 开发环境：node-v6.x.x以上版本.
 2. 安装项目依赖包
+3. 创建组件文件 双击/makeFile.bat, 然后输入组件名
 ```
 npm install
 ```
