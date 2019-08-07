@@ -1,4 +1,4 @@
-'use strict';
+
 
 const autoprefixer = require('autoprefixer');
 const path = require('path');
@@ -171,7 +171,9 @@ module.exports = {
               {
                 loader: require.resolve('css-loader'),
                 options: {
+                  modules: true,
                   importLoaders: 1,
+                  localIdentName: '[name]_[local]_[hash:base64:5]'
                 },
               },
               require.resolve('sass-loader'),

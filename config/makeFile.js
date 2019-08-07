@@ -9,13 +9,17 @@ let replaceFile = function(filePath,sourceRegx){
         if(err){
             return err;
         }
-        let arguments = [componentName];// process.argv.splice(2);
+        let arg = [componentName];// process.argv.splice(2);
+        if(!componentName){
+            console.log('Please input the component name!\n');
+            return;
+        }
         let str = data.toString();
-        str = str.replace(sourceRegx,arguments[0]);
+        str = str.replace(sourceRegx, arg[0]);
 
-        FS.mkdir(PATH + arguments[0],(e)=>{
+        FS.mkdir(PATH + arg[0],(e)=>{
             if(!e){
-                FS.mkdir(PATH + arguments[0] + '/children', e=>{
+                FS.mkdir(PATH + arg[0] + '/children', e=>{
 
                 })
             }else{
@@ -23,13 +27,13 @@ let replaceFile = function(filePath,sourceRegx){
             }
             
         });
-        FS.writeFile(PATH + arguments[0] + '/'+arguments[0] + '.jsx', str, function (err) {
+        FS.writeFile(PATH + arg[0] + '/'+arg[0] + '.jsx', str, function (err) {
             if (err) return err;
         });
-        FS.writeFile(PATH + arguments[0] + '/'+arguments[0] + '.scss', '.' + arguments[0] + '{}', (err)=>{
+        FS.writeFile(PATH + arg[0] + '/'+arg[0] + '.scss', '.' + arg[0] + '{}', (err)=>{
             if (err) return err;
         })
-        console.log('Component of '+ arguments[0] +' has completed!\n');
+        console.log('Component of '+ arg[0] + ' has completed!\n');
     });
     setTimeout(() => {
         replaceFile('./tmp/tmp.jsx', /FILENAME/g);
